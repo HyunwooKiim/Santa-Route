@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산타의 선물 배달 경로</title>
+    <style>
+        body {
+            color: white;
+            background-color: black;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        .svg-container {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .route {
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎅 산타의 선물 배달 경로 🎁</h1>
+    <div class="svg-container">
+        <embed src="{{ svg_file }}" type="image/svg+xml" style="width:100%; height:auto;" />
+    </div>
+    <div class="route">
+        <h2>여기부터 가요! 🚀</h2>
+        <ul>
+            {% for location in route %}
+            <li>{{ location }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
